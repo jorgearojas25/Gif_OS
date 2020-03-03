@@ -30,34 +30,51 @@
         <button class="navButton">Crear Guifos</button>
         <div class="themeButton">
           <button class="navButton main">Elegir tema</button>
-          <button class="navButton close"><img src="./assets/dropdown.svg" alt="desplegar menu"></button>
+          <button class="navButton close">
+            <img src="./assets/dropdown.svg" alt="desplegar menu" />
+          </button>
           <div class="themesList">
             <ul class="themeList">
-              <li class="themeItem"><button class="selectedTheme"><span class="none">S</span>ailor Day</button></li>
-              <li class="themeItem"><button class="selectedTheme"><span class="none">S</span>ailor Night</button></li>
+              <li class="themeItem">
+                <button class="selectedTheme">
+                  <span class="none">S</span>ailor Day
+                </button>
+              </li>
+              <li class="themeItem">
+                <button class="selectedTheme">
+                  <span class="none">S</span>ailor Night
+                </button>
+              </li>
             </ul>
           </div>
         </div>
-        <a class="navLink" href="/html/misGifs.html"><span class="underline">M</span>is Guifos</a>
+        <a class="navLink" href="/html/misGifs.html"
+          ><span class="underline">M</span>is Guifos</a
+        >
       </div>
-        
     </nav>
-   
+
     <section class="searchBar">
       <div class="windowTitle"><p class="windowText">Buscar</p></div>
-      <input
-        type="text"
-        name="searchBar"
-        id="userSearch"
-        placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
-      />
-      <input
-        id="submit"
-        type="button"
-        value="Buscar"
-        class="searchButton"
-        onclick="SearchGifs(document.getElementById('userSearch').value)"
-      />
+      <div class="bodyBar">
+        <input
+          type="text"
+          name="searchBar"
+          id="userSearch"
+          placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+        />
+        <button
+          id="submit"
+          type="button"
+          class="searchButton"
+          onclick="SearchGifs(document.getElementById('userSearch').value)"
+        ><img class="searchIcon" src="./assets/lupa.svg" alt="buscar"> Buscar</button>
+        <div class="searchOptions">
+          <button class="optionSearch">Resultado de búsqueda sugerido</button>
+          <button class="optionSearch">Un resultado similar de búsqueda</button>
+          <button class="optionSearch">Y otro más</button>
+        </div>
+      </div>
     </section>
     <section class="results">
       <div class="suggest">

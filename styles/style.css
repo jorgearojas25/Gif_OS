@@ -9,14 +9,14 @@
   text-decoration: underline;
 }
 
-header .windowTitle {
+.windowTitle {
   background-image: -webkit-gradient(linear, right top, left top, from(#f7c9f3), to(#4180f6));
   background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
   -webkit-box-shadow: 0 1px 0 0 #110038;
           box-shadow: 0 1px 0 0 #110038;
 }
 
-header .windowTitle .windowText {
+.windowTitle .windowText {
   font-family: "Chakra Petch";
   font-size: 12px;
   color: #ffffff;
@@ -81,9 +81,7 @@ nav .groupButtonsNav .themeButton .themesList {
   -webkit-transform: translate(0, 2.2rem);
           transform: translate(0, 2.2rem);
   position: absolute;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
@@ -136,5 +134,54 @@ nav .groupButtonsNav .navLink {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+.searchBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-item-align: center;
+      align-self: center;
+  width: 80%;
+  margin: 0 10% 0 10%;
+  padding-top: 2.4rem;
+}
+
+.searchBar .windowTitle {
+  width: 100%;
+}
+
+.searchBar .bodyBar {
+  background: #e6e6e6;
+  -webkit-box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+  width: 100%;
+}
+
+.searchBar .bodyBar #userSearch {
+  background: #ffffff;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+  width: 88%;
+  margin: 0.7rem 1rem 0.7rem 1rem;
+  padding: 0.8rem 0 0.8rem 1rem;
+}
+
+.searchBar .bodyBar .searchButton {
+  background: #e6e6e6;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+  padding: 0.6% 0.8% 0.6% 0.8%;
+  font-family: "Chakra Petch";
+  font-size: 16px;
+  color: #b4b4b4;
+  letter-spacing: 0;
+  line-height: 18px;
 }
 /*# sourceMappingURL=style.css.map */
