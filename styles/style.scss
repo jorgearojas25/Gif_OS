@@ -50,6 +50,36 @@ nav {
     justify-content: space-evenly;
     .themeButton {
       display: flex;
+      .themesList {
+        transform: translate(0, 2.2rem);
+        position: absolute;
+        display: flex;
+        flex-flow: column nowrap;
+        width: 10.45rem;
+        .themeList {
+          background: #e6e6e6;
+          box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
+          li {
+            list-style: none;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+            .selectedTheme {
+              margin: 5%;
+              width: 90%;
+              background: #fff4fd;
+              border: 1px solid #cca6c9;
+              box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
+              font-family: "Chakra Petch";
+              font-size: 16px;
+              color: #110038;
+              letter-spacing: 0;
+              line-height: 22px;
+            }
+          }
+        }
+      }
+
       .close {
         padding: 0.4rem;
         border-left: none;
@@ -59,37 +89,6 @@ nav {
       text-decoration: none;
       font-family: "Chakra Petch";
       align-self: center;
-    }
-  }
-}
-
-.themesList {
-  position: absolute;
-  transform: translate(0,-.5rem);
-  display: flex;
-  flex-flow: column nowrap;
-  margin: 0 16% 0 70.6%;
-  width: 10.45rem;
-  .themeList {
-    background: #e6e6e6;
-    box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
-    li {
-      list-style: none;
-      display: flex;
-      flex-flow: column nowrap;
-      align-items: center;
-      .selectedTheme {
-        margin: 5%;
-        width: 90%;
-        background: #fff4fd;
-        border: 1px solid #cca6c9;
-        box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
-        font-family: "Chakra Petch";
-        font-size: 16px;
-        color: #110038;
-        letter-spacing: 0;
-        line-height: 22px;
-      }
     }
   }
 }
