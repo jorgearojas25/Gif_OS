@@ -84,8 +84,16 @@ nav .navButton {
   line-height: 18px;
 }
 
+nav .navButton:hover {
+  color: #110038;
+  outline: 0.2px dotted #110038;
+  outline-offset: -5px;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
 nav .groupButtonsNav {
-  width: 40%;
+  width: 45%;
   -ms-flex-item-align: center;
       align-self: center;
   display: -webkit-box;
@@ -106,6 +114,14 @@ nav .groupButtonsNav .themeButton {
   display: flex;
 }
 
+nav .groupButtonsNav .themeButton:hover .navButton {
+  color: #110038;
+  outline: 0.2px dotted #110038;
+  outline-offset: -5px;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
 nav .groupButtonsNav .themeButton .themesList {
   -webkit-transform: translate(0, 2.2rem);
           transform: translate(0, 2.2rem);
@@ -115,7 +131,7 @@ nav .groupButtonsNav .themeButton .themesList {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  width: 10.45rem;
+  width: 11.2rem;
 }
 
 nav .groupButtonsNav .themeButton .themesList .themeList {
@@ -153,7 +169,7 @@ nav .groupButtonsNav .themeButton .themesList .themeList li .selectedTheme {
 }
 
 nav .groupButtonsNav .themeButton .close {
-  padding: 0.4rem;
+  padding: 0 0.8rem 0 0.8rem;
   border-left: none;
 }
 
@@ -163,6 +179,18 @@ nav .groupButtonsNav .navLink {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+}
+
+nav .groupButtonsNav .navLink:hover {
+  color: #110038;
+  outline: 0.2px dotted #110038;
+  outline-offset: 5px;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+nav .groupButtonsNav .navLink:active {
+  color: #cca6c9;
 }
 
 .searchBar {
@@ -251,6 +279,20 @@ nav .groupButtonsNav .navLink {
   border: 1px solid #110038;
 }
 
+#tagButtons {
+  margin: 0.5rem 0 0 0;
+}
+
+#tagButtons .tagButton {
+  margin: 0 0.5rem 0 0;
+  background: #4180f6;
+  border: 1px solid #4c2f99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+  color: white;
+  padding: 0.5vw 0.7vw 0.5vw 0.7vw;
+}
+
 .results {
   width: 80%;
   margin: 0 10% 0 10%;
@@ -307,6 +349,7 @@ nav .groupButtonsNav .navLink {
       grid-template-columns: repeat(4, 24%);
   grid-gap: 1vw;
   width: 100%;
+  margin: 0 0 35px 0;
 }
 
 .imageContainer {
@@ -317,7 +360,21 @@ nav .groupButtonsNav .navLink {
   padding: 0.2vw;
 }
 
-.imageContainer img {
+.imageContainer:hover .imageGif {
+  outline: 0.2px dotted #110038;
+  outline-offset: -5px;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.imageContainer:hover .buttonMore {
+  outline: 0.2px dotted #110038;
+  outline-offset: -5px;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.imageContainer .imageGif {
   width: 100%;
   height: 260px;
 }
@@ -328,7 +385,7 @@ nav .groupButtonsNav .navLink {
   -webkit-box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
           box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
   color: white;
-  padding: .5vw .7vw .5vw .7vw;
+  padding: 0.5vw 0.7vw 0.5vw 0.7vw;
   -webkit-transform: translate(1vw, -4.5vw);
           transform: translate(1vw, -4.5vw);
 }
@@ -346,6 +403,33 @@ nav .groupButtonsNav .navLink {
 
 #suggestGifs .imageContainer .tagVar {
   display: none;
+}
+
+#searchArea {
+  display: none;
+}
+
+#searchArea .imageContainer {
+  height: 264px;
+}
+
+#searchArea .imageContainer:hover .tagVar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#searchArea .imageContainer .windowTitle {
+  display: none;
+}
+
+#searchArea .imageContainer .buttonMore {
+  display: none;
+}
+
+#searchArea .imageContainer .tagVar {
+  -webkit-transform: translate(0vw, -1.88vw);
+          transform: translate(0vw, -1.88vw);
 }
 
 #tendencesGifs .imageContainer {
@@ -369,5 +453,13 @@ nav .groupButtonsNav .navLink {
 #tendencesGifs .imageContainer .tagVar {
   -webkit-transform: translate(0vw, -1.88vw);
           transform: translate(0vw, -1.88vw);
+}
+
+.outline {
+  color: #110038;
+  outline: 0.2px dotted #110038;
+  outline-offset: -5px;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
 }
 /*# sourceMappingURL=style.css.map */
