@@ -4,13 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Author" content="Jorge Andres Rojas Bautista" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Chakra+Petch&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="styles/style.css" />
-    <script src="./js/giphy.js"></script>
-    <script src="./js/main.js"></script>
+
     <title>Welcome to gif.OS</title>
   </head>
   <body>
@@ -24,10 +19,14 @@
     </header>
     <nav class="navbar">
       <div class="brand">
-        <img src="./assets/gifOF_logo.png" alt="guifos logo" />
+        <a href="../index.html"
+          ><img src="../assets/gifOF_logo.png" alt="guifos logo"
+        /></a>
       </div>
       <div class="groupButtonsNav">
-        <button class="navButton">Crear Guifos</button>
+        <a href="./html/crearGif.html"
+          ><button class="navButton">Crear Guifos</button></a
+        >
         <div class="themeButton">
           <button class="navButton main">Elegir tema</button>
           <button class="navButton close">
@@ -62,27 +61,47 @@
           name="searchBar"
           id="userSearch"
           placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
+          onkeyup="DisplaySearchOtions(document.getElementById('userSearch').value)"
         />
         <button
-          id="submit"
+          id="searchButton"
           type="button"
           class="searchButton"
           onclick="SearchGifs(document.getElementById('userSearch').value)"
-        ><img class="searchIcon" src="./assets/lupa.svg" alt="buscar"> Buscar</button>
-        <div class="searchOptions">
-          <button class="optionSearch">Resultado de búsqueda sugerido</button>
-          <button class="optionSearch">Un resultado similar de búsqueda</button>
-          <button class="optionSearch">Y otro más</button>
-        </div>
+        >
+          <img class="searchIcon" src="./assets/lupa.svg" alt="buscar" /> Buscar
+        </button>
+      </div>
+      <div class="searchOptions">
+        <button class="optionSearch selectedSearch">
+          Resultado de búsqueda sugerido
+        </button>
+        <button class="optionSearch">Un resultado similar de búsqueda</button>
+        <button class="optionSearch">Y otro más</button>
       </div>
     </section>
     <section class="results">
-      <div class="suggest">
-        <p class="suggestText">Hoy te sugermios:</p>
+      <div id="suggestArea">
+        <div class="suggest">
+          <p class="suggestText">Hoy te sugermios:</p>
+        </div>
+        <div class="gifsSpace" id="suggestGifs"></div>
       </div>
+     <div id="tendencesArea">
       <div class="tendences">
         <p class="tendencesText">Tendencias:</p>
       </div>
+      <div class="gifsSpace" id="tendencesGifs"></div>
+     </div>
+      <div id="searchArea">
+        <div class="searchResults">
+          <p class="searchText"><span class="searchText"></span>(resultados)</p>
+        </div>
+        <div class="gifsSpace" id="resultsGifs"></div>
+      </div>  
+      
     </section>
+    <script src="./js/giphy.js"></script>
+    <script src="./js/main.js"></script>
   </body>
 </html>

@@ -9,8 +9,28 @@ const gyphyObject = {
     offset: '&offset=',
     rating: '&rating=',
     lang: '&lang=', 
-    createUrl: (a) => {
-        alert(a)
+    createUrl: (consulta) => {
+        switch(consulta.tipo){
+            case 'search':
+                return `${gyphyObject.baseUrl}${gyphyObject.search}${gyphyObject.key}${gyphyObject.query}${consulta.search}${gyphyObject.limit}${consulta.limit}`
+                break;
+            case 'trending':
+                return `${gyphyObject.baseUrl}${gyphyObject.trending}${gyphyObject.key}${gyphyObject.limit}${consulta.limit}`
+                break;
+        }
+    }
+}
+
+const UrlTypes = {
+    search: 'search',
+    trending: 'trending'
+}
+
+class Consulta{
+    constructor(tipo, limit, search){
+        this.tipo = tipo,
+        this.limit = limit,
+        this.search = search
     }
 }
 

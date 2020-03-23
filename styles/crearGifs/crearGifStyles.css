@@ -1,1 +1,25 @@
-/* No CSS *//*# sourceMappingURL=crearGifStyles.css.map */
+nav {
+  margin: 0 10% 0 7.4%;
+}
+
+nav .brand a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav .brand a img {
+  margin: 0 0 0 5px;
+}
+
+nav .groupButtonsNav {
+  display: none;
+}
+/*# sourceMappingURL=crearGifStyles.css.map */

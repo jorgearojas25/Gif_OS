@@ -1,0 +1,16 @@
+nav {
+    margin: 0 10% 0 7.4%;
+  .brand {
+    a {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      img{
+          margin: 0 0 0 5px;
+      }
+    }
+  }
+  .groupButtonsNav {
+    display: none;
+  }
+}
