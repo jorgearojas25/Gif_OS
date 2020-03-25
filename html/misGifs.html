@@ -4,8 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Author" content="Jorge Andres Rojas Bautista" />
-    <link rel="stylesheet" href="../styles/style.css" />
-    <link rel="stylesheet" href="../styles/misGifs/misGifsStyles.css" />
+    <link rel="stylesheet" href="../styles/styleDay.css" />
     <title>Mis guifos</title>
   </head>
   <body>
@@ -24,11 +23,21 @@
       <div class="groupButtonsNav">
         <a href="../html/crearGif.html"><button class="navButton">Crear Guifos</button></a>
         <div class="themeButton">
-          <button class="navButton main">Elegir tema</button>
-          <button class="navButton close">
+          <button
+            id="themeButton"
+            class="navButton main"
+            onclick="OpenThemeList()"
+          >
+            Elegir tema
+          </button>
+          <button
+            id="themeButtonShort"
+            class="navButton close"
+            onclick="OpenThemeList()"
+          >
             <img src="../assets/dropdown.svg" alt="desplegar menu" />
           </button>
-          <div class="themesList">
+          <div class="themesList" id="themesList">
             <ul class="themeList">
               <li class="themeItem">
                 <button class="selectedTheme">
@@ -48,5 +57,21 @@
         >
       </div>
     </nav>
+    <section class="results">
+      <div id="misGifsArea">
+        <div class="misGifsResults">
+          <p class="misGifsText">Mis guifos</p>
+        </div>
+        <div class="gifsSpace" id="misGifs"></div>
+      </div>
+    </section>
+    <script src="../js/progressbar.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/RecordRTC/5.5.8/RecordRTC.js"
+      type="text/javascript"
+    ></script>
+    <script src="../js/giphy.js"></script>
+    <script src="../js/recorder.js"></script>
+    <script src="../js/main.js"></script>
   </body>
 </html>
