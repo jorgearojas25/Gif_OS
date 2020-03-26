@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Author" content="Jorge Andres Rojas Bautista" />
-    <link rel="stylesheet" href="./styles/stylenight.css">
+    <link id="themeStlye" rel="stylesheet" href="./styles/styleDay.css">
 
     <title>Welcome to gif.OS</title>
   </head>
@@ -19,39 +19,41 @@
     </header>
     <nav class="navbar">
       <div class="brand">
-        <a href="../index.html"
-          ><img src="../assets/gifOF_logo.png" alt="guifos logo"
-        /></a>
+        <a href="../index.html"></a>
       </div>
       <div class="groupButtonsNav">
+        <!-- * Boton Crear gifs * -->
         <a href="./html/crearGif.html"
           ><button class="navButton">Crear Guifos</button></a
         >
         <div class="themeButton">
+          <!-- * Boton elegir tema * -->
           <button
             id="themeButton"
             class="navButton main"
-            onclick="OpenThemeList()"
+            onclick="OpenCloseThemeList()"
           >
             Elegir tema
           </button>
+           <!-- * Boton elegir tema SVG * -->
           <button
             id="themeButtonShort"
             class="navButton close"
-            onclick="OpenThemeList()"
+            onclick="OpenCloseThemeList()"
           >
             <img src="./assets/dropdown.svg" alt="desplegar menu" />
           </button>
+          <!-- * Lista de temas * -->
           <div class="themesList" id="themesList">
             <ul class="themeList">
               <li class="themeItem">
-                <button class="selectedTheme">
-                  <span class="none">S</span>ailor Day
+                <button class="selectedTheme" id="buttonDay" onclick="SetStyle('Day')">
+                  <span id="sDay" class="none">S</span>ailor Day
                 </button>
               </li>
               <li class="themeItem">
-                <button class="selectedTheme">
-                  <span class="none">S</span>ailor Night
+                <button class="selectedTheme" id="buttonNight" onclick="SetStyle('Night')">
+                  <span id="sNight" class="none">S</span>ailor Night
                 </button>
               </li>
             </ul>
@@ -62,10 +64,12 @@
         >
       </div>
     </nav>
-
     <section class="searchBar">
-      <div class="windowTitle"><p class="windowText">Buscar</p></div>
+      <div class="windowTitle">
+        <p class="windowText">Buscar</p>
+      </div>
       <div class="bodyBar">
+        <!-- * Input busqueda * -->
         <input
           type="text"
           name="searchBar"
@@ -73,6 +77,7 @@
           placeholder="Busca gifs, hashtags, temas, busca lo que quieras…"
           onkeyup="DisplaySearchOtions(document.getElementById('userSearch').value)"
         />
+        <!-- * Boton buscar *  -->
         <button
           id="searchButton"
           type="button"
@@ -82,14 +87,10 @@
           <img class="searchIcon" src="./assets/lupa.svg" alt="buscar" /> Buscar
         </button>
       </div>
+      <!-- * Pintura de botones TAG * -->
       <div id="tagButtons"></div>
-      <div class="searchOptions">
-        <button class="optionSearch selectedSearch">
-          Resultado de búsqueda sugerido
-        </button>
-        <button class="optionSearch">Un resultado similar de búsqueda</button>
-        <button class="optionSearch">Y otro más</button>
-      </div>
+      <!-- * Pintura Lista de botones * -->
+      <div class="searchOptions"> </div>
     </section>
     <section class="results">
       <div id="suggestArea">

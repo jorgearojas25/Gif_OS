@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Author" content="Jorge Andres Rojas Bautista" />
-    <link rel="stylesheet" href="../styles/styleDay.css" />
+    <link id="themeStlye" rel="stylesheet" href="../styles/styleDay.css" />
     <title>Mis guifos</title>
   </head>
   <body>
@@ -18,7 +18,7 @@
     </header>
     <nav class="navbar">
       <div class="brand">
-        <a href="../index.html"><img src="../assets/gifOF_logo.png" alt="guifos logo" /></a>
+        <a href="../index.html"></a>
       </div>
       <div class="groupButtonsNav">
         <a href="../html/crearGif.html"><button class="navButton">Crear Guifos</button></a>
@@ -26,27 +26,27 @@
           <button
             id="themeButton"
             class="navButton main"
-            onclick="OpenThemeList()"
+            onclick="OpenCloseThemeList()"
           >
             Elegir tema
           </button>
           <button
             id="themeButtonShort"
             class="navButton close"
-            onclick="OpenThemeList()"
+            onclick="OpenCloseThemeList()"
           >
             <img src="../assets/dropdown.svg" alt="desplegar menu" />
           </button>
           <div class="themesList" id="themesList">
             <ul class="themeList">
               <li class="themeItem">
-                <button class="selectedTheme">
-                  <span class="none">S</span>ailor Day
+                <button class="selectedTheme" id="buttonDay" onclick="SetStyle('Day')">
+                  <span id="sDay" class="none">S</span>ailor Day
                 </button>
               </li>
               <li class="themeItem">
-                <button class="selectedTheme">
-                  <span class="none">S</span>ailor Night
+                <button class="selectedTheme" id="buttonNight" onclick="SetStyle('Night')">
+                  <span id="sNight" class="none">S</span>ailor Night
                 </button>
               </li>
             </ul>

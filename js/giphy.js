@@ -1,3 +1,5 @@
+// * Contiene constantes de configuracion para el uso del API *
+
 const gyphyObject = {
   baseUrl: "https://api.giphy.com/v1/gifs",
   uploadUrl: "https://upload.giphy.com/v1/gifs",

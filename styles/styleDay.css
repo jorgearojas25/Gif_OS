@@ -11,6 +11,10 @@ button {
   cursor: pointer;
 }
 
+.line-through {
+  text-decoration: line-through;
+}
+
 .underline {
   text-decoration: underline;
 }
@@ -52,6 +56,32 @@ button {
   content: url("../assets/buttonClose.svg");
 }
 
+#tagButtons {
+  margin: 0.5rem 0 0 0;
+}
+
+#tagButtons .tagButton {
+  margin: 0 0.5rem 0 0;
+  background: #4180f6;
+  border: 1px solid #4c2f99;
+  -webkit-box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+          box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+  color: white;
+  padding: 0.5vw 0.7vw 0.5vw 0.7vw;
+}
+
+.outline {
+  color: #110038;
+  outline: 0.2px dotted #110038;
+  outline-offset: -5px;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
+}
+
+.bold {
+  font-weight: bolder;
+}
+
 nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -68,6 +98,10 @@ nav {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-top: 2.4rem;
+}
+
+nav .brand a::after {
+  content: url("../assets/gifOF_logo.png");
 }
 
 nav .navButton {
@@ -155,17 +189,26 @@ nav .groupButtonsNav .themeButton .themesList .themeList li {
 }
 
 nav .groupButtonsNav .themeButton .themesList .themeList li .selectedTheme {
-  margin: 5%;
+  margin: 3%;
+  padding: 3% 0 3% 0;
   width: 90%;
-  background: #fff4fd;
-  border: 1px solid #cca6c9;
-  -webkit-box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
-          box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
-  font-family: "Chakra Petch";
+  background: #cccccc;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
   font-size: 16px;
   color: #110038;
   letter-spacing: 0;
   line-height: 22px;
+}
+
+nav .groupButtonsNav .themeButton .themesList .themeList li .activeTheme {
+  margin: 3%;
+  width: 90%;
+  background: #f0f0f0;
+  border: 1px solid #808080;
+  -webkit-box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
+          box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
 }
 
 nav .groupButtonsNav .themeButton .close {
@@ -245,7 +288,7 @@ nav .groupButtonsNav .navLink:active {
 }
 
 .searchBar .bodyBar .buttonActive {
-  color: white;
+  color: #110038;
   background: #f7c9f3;
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
@@ -285,20 +328,6 @@ nav .groupButtonsNav .navLink:active {
 .searchBar .searchOptions .selectedSearch {
   background: #e6e6e6;
   border: 1px solid #110038;
-}
-
-#tagButtons {
-  margin: 0.5rem 0 0 0;
-}
-
-#tagButtons .tagButton {
-  margin: 0 0.5rem 0 0;
-  background: #4180f6;
-  border: 1px solid #4c2f99;
-  -webkit-box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
-          box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
-  color: white;
-  padding: 0.5vw 0.7vw 0.5vw 0.7vw;
 }
 
 .results {
@@ -498,18 +527,6 @@ nav .groupButtonsNav .navLink:active {
           transform: translate(0vw, -1.88vw);
 }
 
-.outline {
-  color: #110038;
-  outline: 0.2px dotted #110038;
-  outline-offset: -5px;
-  -webkit-filter: brightness(0.9);
-          filter: brightness(0.9);
-}
-
-.bold {
-  font-weight: bolder;
-}
-
 .confirmGif {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -593,10 +610,6 @@ nav .groupButtonsNav .navLink:active {
           box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
 }
 
-.line-through {
-  text-decoration: line-through;
-}
-
 .recordGifWindow {
   display: none;
   -webkit-box-orient: horizontal;
@@ -647,6 +660,10 @@ nav .groupButtonsNav .navLink:active {
           align-items: center;
   margin: 1vw 1vw 1.5vw 1vw;
   width: 98%;
+  background: #ffffff;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+          box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
 }
 
 .recordGifWindow .gifs .showVideo #myVideo {
@@ -884,6 +901,10 @@ nav .groupButtonsNav .navLink:active {
 
 .recordGifWindow .actions .forwardGif .progressVar .forwardView {
   width: 100px;
+  background: #b4b4b4;
+  border: 1px solid #979797;
+  -webkit-box-shadow: inset 2px 2px 0 0 #e6e6e6, inset -2px -2px 0 0 #000000;
+          box-shadow: inset 2px 2px 0 0 #e6e6e6, inset -2px -2px 0 0 #000000;
 }
 
 .recordGifWindow .actions .forwardGif .groupButtons {
@@ -905,6 +926,14 @@ nav .groupButtonsNav .navLink:active {
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
           box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+}
+
+.recordGifWindow .actions .forwardGif .groupButtons .repeatGif:hover {
+  color: #110038;
+  outline: 0.2px dotted #110038;
+  outline-offset: -5px;
+  -webkit-filter: brightness(0.9);
+          filter: brightness(0.9);
 }
 
 .recordGifWindow .actions .forwardGif .groupButtons .uploadGif {

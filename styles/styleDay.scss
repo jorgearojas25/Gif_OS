@@ -7,14 +7,16 @@
   font-family: "Chakra Petch";
 }
 
+// * Estilos Generales *
 button {
   cursor: pointer;
 }
-
+.line-through {
+  text-decoration: line-through;
+}
 .underline {
   text-decoration: underline;
 }
-
 .windowTitle {
   background-image: linear-gradient(270deg, #f7c9f3 0%, #4180f6 100%);
   box-shadow: 0 1px 0 0 #110038;
@@ -37,6 +39,29 @@ button {
     }
   }
 }
+#tagButtons {
+  margin: 0.5rem 0 0 0;
+  .tagButton {
+    margin: 0 0.5rem 0 0;
+    background: #4180f6;
+    border: 1px solid #4c2f99;
+    box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
+    //mio
+    color: white;
+    padding: 0.5vw 0.7vw 0.5vw 0.7vw;
+  }
+}
+.outline {
+  color: #110038;
+  outline: 0.2px dotted #110038;
+  outline-offset: -5px;
+  filter: brightness(0.9);
+}
+.bold {
+  font-weight: bolder;
+}
+
+// * Estilo Componentes * 
 
 nav {
   display: flex;
@@ -46,7 +71,13 @@ nav {
   margin: 0 10% 0 10%;
   justify-content: space-between;
   padding-top: 2.4rem;
-
+  .brand {
+    a {
+      &::after {
+        content: url("../assets/gifOF_logo.png");
+      }
+    }
+  }
   .navButton {
     padding: 0.5rem 1.8rem 0.5rem 1.8rem;
     background: #f7c9f3;
@@ -96,16 +127,23 @@ nav {
             flex-flow: column nowrap;
             align-items: center;
             .selectedTheme {
-              margin: 5%;
+              margin: 3%;
+              padding: 3% 0 3% 0;
               width: 90%;
-              background: #fff4fd;
-              border: 1px solid #cca6c9;
-              box-shadow: inset -1px -1px 0 0 #e6dce4, inset 1px 1px 0 0 #ffffff;
-              font-family: "Chakra Petch";
+              background: #cccccc;
+              border: 1px solid #808080;
+              box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
               font-size: 16px;
               color: #110038;
               letter-spacing: 0;
               line-height: 22px;
+            }
+            .activeTheme {
+              margin: 3%;
+              width: 90%;
+              background: #f0f0f0;
+              border: 1px solid #808080;
+              box-shadow: inset -1px -1px 0 0 #b4b4b4, inset 1px 1px 0 0 #ffffff;
             }
           }
         }
@@ -170,7 +208,7 @@ nav {
       line-height: 18px;
     }
     .buttonActive {
-      color: white;
+      color: #110038;
       background: #f7c9f3;
       border: 1px solid #110038;
       box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
@@ -201,19 +239,6 @@ nav {
       background: #e6e6e6;
       border: 1px solid #110038;
     }
-  }
-}
-
-#tagButtons {
-  margin: 0.5rem 0 0 0;
-  .tagButton {
-    margin: 0 0.5rem 0 0;
-    background: #4180f6;
-    border: 1px solid #4c2f99;
-    box-shadow: inset -2px -2px 0 0 #284f99, inset 2px 2px 0 0 #ffffff;
-    //mio
-    color: white;
-    padding: 0.5vw 0.7vw 0.5vw 0.7vw;
   }
 }
 
@@ -261,10 +286,9 @@ nav {
   }
 }
 
+// * Estilos especificos areas *
+
 .gifsSpace {
-  // display: flex;
-  // flex-flow: row wrap;
-  // justify-content: space-around;
   display: grid;
   grid-template-columns: repeat(4, 24%);
   grid-gap: 1vw;
@@ -396,16 +420,8 @@ nav {
   }
 }
 
-.outline {
-  color: #110038;
-  outline: 0.2px dotted #110038;
-  outline-offset: -5px;
-  filter: brightness(0.9);
-}
 
-.bold {
-  font-weight: bolder;
-}
+// * Estilos Instrucciones Recorder *
 
 .confirmGif {
   display: flex;
@@ -470,9 +486,7 @@ nav {
   }
 }
 
-.line-through {
-  text-decoration: line-through;
-}
+//* Estilos Recorder Window *
 
 .recordGifWindow {
   display: none;
@@ -499,6 +513,9 @@ nav {
       align-items: center;
       margin: 1vw 1vw 1.5vw 1vw;
       width: 98%;
+      background: #ffffff;
+      border: 1px solid #979797;
+      box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
       #myVideo {
         width: 100%;
         height: 25vw;
@@ -664,6 +681,9 @@ nav {
         }
         .forwardView {
           width: 100px;
+          background: #b4b4b4;
+          border: 1px solid #979797;
+          box-shadow: inset 2px 2px 0 0 #e6e6e6, inset -2px -2px 0 0 #000000;
         }
       }
       .groupButtons {
@@ -680,6 +700,12 @@ nav {
           background: #fff4fd;
           border: 1px solid #110038;
           box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+          &:hover {
+            color: #110038;
+            outline: 0.2px dotted #110038;
+            outline-offset: -5px;
+            filter: brightness(0.9);
+          }
         }
         .uploadGif {
           width: 12vw;
@@ -697,5 +723,3 @@ nav {
     }
   }
 }
-
-
