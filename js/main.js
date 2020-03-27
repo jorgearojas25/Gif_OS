@@ -70,7 +70,7 @@ const CambiarTema = tema => {
   }
 };
 
-// * Cambia el local storage del tema seleccionado *
+// * Cambia el local storage del tema seleccionado y lo aplica*
 const SetStyle = style => {
   localStorage.setItem("tema", style);
   CambiarTema(style);

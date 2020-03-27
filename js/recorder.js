@@ -239,7 +239,7 @@ const MostrarFinal = () => {
 
 // * Usa el id para consultarlo, tomar la data y almacenarla *
 const GuardarGifLocalStorage = async id => {
-    let d = await fetch(
+    let resp = await fetch(
         gyphyObject.createUrl(new Consulta(UrlTypes.searchId, null, id))
       ).then(response => {
           return response.json();
