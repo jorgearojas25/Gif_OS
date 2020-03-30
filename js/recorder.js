@@ -74,7 +74,7 @@ buttonCopy.addEventListener('click', event => {
 
     navigator.clipboard.writeText(val).then(() => {
         console.log('texto copiado');
-    })
+    }).catch(e => {console.error(`[Copy button] ${e}`)})
 })
 
 // * Confirma la lectura de instrucciones, display de la ventana de record, crea el stream *

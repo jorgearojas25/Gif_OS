@@ -216,7 +216,7 @@ nav {
   }
   .searchOptions {
     position: absolute;
-    width: 67.35rem;
+    width: 80%;
     transform: translate(0, 5.5rem);
     background: #e6e6e6;
     box-shadow: inset -2px -2px 0 0 #b4b4b4, inset 2px 2px 0 0 #ffffff;
@@ -721,5 +721,24 @@ nav {
         }
       }
     }
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  #userSearch {
+    font-family: "Chakra Petch";
+    background: #ffffff;
+    border: 1px solid #979797;
+    box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+    width: 80%;
+    margin: 0.7rem 1rem 0.7rem 1rem;
+    padding: 0.8rem 0 0.8rem 1rem;
+  }
+  .gifsSpace {
+    display: grid;
+    grid-template-columns: repeat(2, 48%);
+    grid-gap: 1vw;
+    width: 100%;
+    margin: 0 0 35px 0;
   }
 }

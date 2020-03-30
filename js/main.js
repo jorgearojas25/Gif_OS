@@ -44,7 +44,7 @@ window.onload = () => {
 const CambiarTema = tema => {
   switch (tema) {
     case "Day":
-      style.href = "../styles/styleDay.css";
+      style.href = "./styles/styleDay.css";
       document.getElementById("sDay").setAttribute("class", "underline");
       document
         .getElementById("buttonDay")
@@ -56,7 +56,7 @@ const CambiarTema = tema => {
       OpenCloseThemeList();
       break;
     case "Night":
-      style.href = "../styles/styleNight.css";
+      style.href = "./styles/styleNight.css";
       document.getElementById("sDay").setAttribute("class", "none");
       document
         .getElementById("buttonDay")

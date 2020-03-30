@@ -297,7 +297,7 @@ nav .groupButtonsNav .navLink:active {
 
 .searchBar .searchOptions {
   position: absolute;
-  width: 67.35rem;
+  width: 80%;
   -webkit-transform: translate(0, 5.5rem);
           transform: translate(0, 5.5rem);
   background: #e6e6e6;
@@ -948,5 +948,27 @@ nav .groupButtonsNav .navLink:active {
   border: 1px solid #110038;
   -webkit-box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
           box-shadow: inset -1px -1px 0 0 #997d97, inset 1px 1px 0 0 #ffffff;
+}
+
+@media only screen and (max-width: 780px) {
+  #userSearch {
+    font-family: "Chakra Petch";
+    background: #ffffff;
+    border: 1px solid #979797;
+    -webkit-box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+            box-shadow: inset -2px -2px 0 0 #e6e6e6, inset 2px 2px 0 0 #000000;
+    width: 80%;
+    margin: 0.7rem 1rem 0.7rem 1rem;
+    padding: 0.8rem 0 0.8rem 1rem;
+  }
+  .gifsSpace {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (48%)[2];
+        grid-template-columns: repeat(2, 48%);
+    grid-gap: 1vw;
+    width: 100%;
+    margin: 0 0 35px 0;
+  }
 }
 /*# sourceMappingURL=styleDay.css.map */
